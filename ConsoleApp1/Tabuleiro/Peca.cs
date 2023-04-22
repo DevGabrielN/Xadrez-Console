@@ -1,8 +1,8 @@
 ﻿using System.Security.Cryptography.X509Certificates;
 
-namespace Tabuleiro
+namespace TabuleiroConsole
 {
-    internal class Peca
+    public class Peca
     {
         public Posicao Posicao { get; set; }
         public Cor Cor { get; protected set; }         
@@ -16,5 +16,6 @@ namespace Tabuleiro
             Tab = tab;
             QtdMovimentos = 0;
         }
+
     }
 }
