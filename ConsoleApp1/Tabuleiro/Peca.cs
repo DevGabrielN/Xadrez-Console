@@ -17,5 +17,10 @@ namespace TabuleiroConsole
             QtdMovimentos = 0;
         }
 
+        public void IncremntarQteMovimnto()
+        {
+            QtdMovimentos++;
+        }
+
     }
 }
