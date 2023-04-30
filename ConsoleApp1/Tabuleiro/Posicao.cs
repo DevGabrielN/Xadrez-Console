@@ -10,6 +10,11 @@
             Linha = linha;
             Coluna = coluna;
         }
+        public void DefinirPosicao(int linha, int coluna) 
+        {
+            Linha = linha;
+            Coluna = coluna;
+        }
 
         public override string ToString()
         {

@@ -2,10 +2,10 @@
 
 namespace TabuleiroConsole
 {
-    public class Peca
+    public abstract class Peca
     {
         public Posicao Posicao { get; set; }
-        public Cor Cor { get; protected set; }         
+        public Cor Cor { get; protected set; }
         public int QtdMovimentos { get; protected set; }
         public Tabuleiro Tab { get; protected set; }
 
@@ -21,6 +21,7 @@ namespace TabuleiroConsole
         {
             QtdMovimentos++;
         }
+        public abstract bool[,] MovimentosPosiveis();       
 
     }
 }
