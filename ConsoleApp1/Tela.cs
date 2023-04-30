@@ -1,6 +1,7 @@
 ﻿using System.Security.Cryptography.X509Certificates;
 using TabuleiroConsole;
 using Xadrez;
+using System.Collections.Generic;
 namespace Xadrez_Console;
 
 internal class Tela
@@ -17,6 +18,34 @@ internal class Tela
             Console.WriteLine();
         }
         Console.WriteLine("  a b c d e f g h");
+    }
+    public static void ImprimirPartida(PartidaDeXadrez partidaDeXadrez)
+    {
+        ImprimirTabuleiro(partidaDeXadrez.Tab);
+        ImprimirPecasCapturadas(partidaDeXadrez);
+        Console.WriteLine("\nTurno: " + partidaDeXadrez.Turno);
+        Console.WriteLine("Aguardando jogada: " + partidaDeXadrez.JogadorAtual);
+    }
+
+    public static void ImprimirPecasCapturadas(PartidaDeXadrez partidaDeXadrez)
+    {
+        Console.WriteLine("\nPeças capturadas: ");
+        Console.Write("Brancas: ");
+        ImprimirConjunto(partidaDeXadrez.PecasCapturadas(Cor.Branca));
+        Console.Write("\nPretas: ");
+        ConsoleColor aux = Console.ForegroundColor;
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        ImprimirConjunto(partidaDeXadrez.PecasCapturadas(Cor.Preta));
+        Console.ForegroundColor = aux;
+    }
+    public static void ImprimirConjunto(HashSet<Peca> conjunto)
+    {
+        Console.Write("[");
+        foreach (Peca p in conjunto)
+        {
+            Console.Write(p.ToString() + " ");
+        }
+        Console.Write("]");
     }
 
     public static void ImprimirTabuleiro(Tabuleiro tab, bool[,] posicoesPossiveis)
