@@ -24,10 +24,18 @@ internal class Tela
         ImprimirTabuleiro(partidaDeXadrez.Tab);
         ImprimirPecasCapturadas(partidaDeXadrez);
         Console.WriteLine("\nTurno: " + partidaDeXadrez.Turno);
-        Console.WriteLine("Aguardando jogada: " + partidaDeXadrez.JogadorAtual);
-        if (partidaDeXadrez.Xeque)
+        if (!partidaDeXadrez.Terminada)
         {
-            Console.WriteLine("Xeque!");
+            Console.WriteLine("Aguardando jogada: " + partidaDeXadrez.JogadorAtual);
+            if (partidaDeXadrez.Xeque)
+            {
+                Console.WriteLine("Xeque!");
+            }
+        }
+        else
+        {
+            Console.WriteLine("XEQUEMATE!");
+            Console.WriteLine("Vencedor: " + partidaDeXadrez.JogadorAtual);
         }
     }
 
