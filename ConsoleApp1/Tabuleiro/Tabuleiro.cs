@@ -15,7 +15,14 @@
         }
         public Peca Pecas(Posicao pos)
         {
-            return Peca[pos.Linha, pos.Coluna];
+            try
+            {
+                return Peca[pos.Linha, pos.Coluna];
+            }
+            catch(IndexOutOfRangeException)
+            {
+                throw new TabuleiroException("Posição inválida! ");
+            }
         }
         public Peca Pecas(int linha, int coluna)
         {

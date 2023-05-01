@@ -65,7 +65,7 @@ internal class Tela
         ConsoleColor fundoOriginal = Console.BackgroundColor;
         ConsoleColor fundoAlterado = ConsoleColor.DarkGray;
         for (int i = 0; i < tab.Linhas; i++)
-        {
+        {   
             Console.Write(8 - i + " ");
             for (int j = 0; j < tab.Colunas; j++)
             {
@@ -89,7 +89,7 @@ internal class Tela
 
     public static PosicaoXadrez LerPosicaoXadrez()
     {
-        string s = Console.ReadLine();
+        string s = Console.ReadLine().ToLower();        
         char coluna = s[0];
         int linha = int.Parse(s[1] + "");
         return new PosicaoXadrez(coluna, linha);
