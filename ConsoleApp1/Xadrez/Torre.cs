@@ -1,5 +1,4 @@
 ﻿using TabuleiroConsole;
-using System.Linq;
 
 namespace Xadrez
 {

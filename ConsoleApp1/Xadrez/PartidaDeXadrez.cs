@@ -1,7 +1,4 @@
-﻿using System;
-using TabuleiroConsole;
-using Xadrez_Console;
-using System.Collections.Generic;
+﻿using TabuleiroConsole;
 
 namespace Xadrez
 {

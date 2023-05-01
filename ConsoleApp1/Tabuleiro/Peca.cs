@@ -1,6 +1,4 @@
-﻿using System.Security.Cryptography.X509Certificates;
-
-namespace TabuleiroConsole
+﻿namespace TabuleiroConsole
 {
     public abstract class Peca
     {

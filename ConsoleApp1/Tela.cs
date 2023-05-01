@@ -1,7 +1,5 @@
-﻿using System.Security.Cryptography.X509Certificates;
-using TabuleiroConsole;
+﻿using TabuleiroConsole;
 using Xadrez;
-using System.Collections.Generic;
 namespace Xadrez_Console;
 
 internal class Tela
